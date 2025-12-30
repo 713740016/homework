@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生作業查詢系統</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 作業繳交狀況查詢</h1>
+            <p class="subtitle">學生查看頁面</p>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 搜尋學生姓名..." onkeyup="filterStudents()">
+        </div>
+
+        <div class="table-container">
+            <table id="homeworkTable">
+                <thead>
+                    <tr id="tableHeader">
+                        <th>學生姓名</th>
+                        <!-- 作業標題將動態插入這裡 -->
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- 動態生成 -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="totalStudents">0</h3>
+                <p>總學生數</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="totalAssignments">0</h3>
+                <p>總作業數</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="dataManager.js"></script>
+    <script src="student.js"></script>
+</body>
+</html>
+
